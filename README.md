@@ -1,5 +1,4 @@
-# tfang7.github.io
+fang-website
+============
 
-Member List
------------
-Tommy Fang
+My portfolio and resume website.
