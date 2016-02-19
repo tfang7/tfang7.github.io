@@ -1,4 +1,6 @@
-fang-website
-============
+Pick Up Games
 
-My portfolio and resume website.
+Member List
+-----------
+Tommy Fang
+James Grimes
