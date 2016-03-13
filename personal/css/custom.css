@@ -97,6 +97,10 @@ background-color:gray;
 @media (min-width: 550px) {
   .section {
     /*padding: 12rem 0 11rem;*/
+	padding-left:100px;
+  }
+  .container img {
+	padding-right:20px;
   }
   .categories {
   background-size: 100% 100%;
@@ -109,21 +113,6 @@ background-color:gray;
     height: 165px;
   }
 
-  .phone {
-    position: absolute;
-    top: -7rem;
-    right: 3rem;
-    max-height: 362px;
-    z-index: 3;
-  }
-  .phone + .phone {
-    top: -6rem;
-    display: block;
-    max-width: 73.8%;
-    right: 0;
-    z-index: 2;
-    max-height: 338px;
-  }
   .hero-heading {
     font-size: 2.4rem;
   }
