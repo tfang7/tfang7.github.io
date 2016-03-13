@@ -60,7 +60,7 @@ background-color:gray;
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .values {
   background-image: url('../images/values-bg.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
 }
@@ -85,12 +85,13 @@ background-color:gray;
 /* Categories
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .categories {
-  background-image: url('../images/nybg.jpg');
-  background-size: 100% 100%;
+  background-image: url('../images/nybg_huge.jpg');
+  /*background-size: cover;*/
   color: #fff;
 }
 .categories .section-description { 
   margin-bottom: 4rem;
+  font-size:2rem;
 }
 
 /* Bigger than 550 */
