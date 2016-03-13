@@ -1,34 +1,9 @@
 /* Shared
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button {
-  border-radius: 100px
- }
-.tooltip {
-    position: relative;
-    display: inline-block;
-	
+  border-radius: 100px;
 }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
-	opacity:100%;
-    width: 100px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-	top: -5px;
-	left:30%;
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-	opacity:50%;
-}
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
@@ -45,21 +20,19 @@
 .phones {
   position: relative;
 }
-.phone img {
-	opacity: 0;
-	filter: alpha(opacity = 0);
-
+.phone {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -12rem;
 }
 .phone + .phone {
   display: none;
 }
-.body {
-background-color:gray;
-}
+
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .values {
-  background-image: url('images/values-bg.jpg');
+  background-image: url('../images/values-bg.jpg');
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
@@ -85,34 +58,24 @@ background-color:gray;
 /* Categories
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .categories {
+  background-image: url('../images/values-bg.jpg');
+  background-size: cover;
   color: #fff;
 }
 .categories .section-description { 
   margin-bottom: 4rem;
-  font-size:2rem;
-  
 }
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
-.categories .section-description { 
-  font-size:2rem;
-  
-  }
   .section {
     padding: 12rem 0 11rem;
   }
-  .categories {
-  background-size: 100% 100%;
-}
   .hero {
-   background-image: url('../images/fullPlate.png');
-   background-size:cover;
     padding-bottom: 12rem;
     text-align: left;
     height: 165px;
   }
-
   .phone {
     position: absolute;
     top: -7rem;
@@ -163,7 +126,6 @@ background-color:gray;
   }
   .categories {
     padding: 15rem 0 8rem;
-	background-size:cover;
   }
 }
 
