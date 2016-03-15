@@ -22,7 +22,7 @@
   <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
-  <link rel="stylesheet" media="screen" href="../themes/style/swiss.css">
+  <link rel="stylesheet" media="screen" href="../themes/style/neon.css">
 
   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
   <link rel="stylesheet" media="screen" href="../themes/transition/cube.css">
@@ -41,136 +41,85 @@
       <h1>Tommy Fang's Portfolio</h1>
     </section>
 
-    <section class="slide" id="how-to-overview">
-      <h2>How to Make a Deck</h2>
+    <section class="slide" id="gbr-game1">
+      <h2>Groundbreaking Reads</h2>
       <ol>
         <li>
-          <h3>Write Slides</h3>
-          <p>Slide content is simple&nbsp;HTML.</p>
+          <h3>HaxeFlixel Game</h3>
+          <p>This was a HaxeFlixel game developed by five members. I created the monster AI, implemented cut-scenes, and earthquake event interactions. </p>
         </li>
         <li>
-          <h3>Choose Themes</h3>
-          <p>One for slide styles and one for deck&nbsp;transitions.</p>
+          <h3>Theme</h3>
+          <p>The theme of this game project was constrained to the keywords "library", "earthquake", and "monster".</p>
         </li>
         <li>
-          <h3>Include Extensions</h3>
-          <p>Add extra functionality to your deck, or leave it stripped&nbsp;down.</p>
+          <h3>Gameplay</h3>
+          <p>The game is set in a library. You are a cultist who has run into a bit of demon trouble, so naturally you try to find the correct spell-books to banish the demon while it chases you during an earthquake.</p>
         </li>
+		<li>
+			<h3>Links</h3>
+			<p><a href ="https://github.com/pcioni/HaxeFlixel-game" >Project Source</a></p>
+			<p>How to run on next page.</p>
+		</li>
       </ol>
     </section>
 
-    <section class="slide" id="quick-start">
-      <h2>Quick Start</h2>
-      <p>When you <a href="https://github.com/imakewebthings/deck.js/archive/latest.zip">download</a> deck.js, it will include a file named <code>boilerplate.html</code>. You can immediately start editing slides in this page and viewing them in your web browser. Later on, when you are comfortable customizing the deck, you can edit the various pieces of the boilerplate or make your own to suit your needs.</p>
+    <section class="slide" id="gbr-quick-start">
+      <h2>Groundbreaking Reads Quick Start</h2>
+	  <ol>
+	  <li><code><a href = "http://www.openfl.org/documentation/setup/">Install HaxeFlixel/OpenFL library</a></code> <br><p>Install Haxe and OpenFL</p> </li>
+	  <li><code><a href = "http://www.flashdevelop.org/">Install FlashDevelop IDE</a></code></li>
+	  <li><code><a href = "https://github.com/pcioni/HaxeFlixel-game" >Project Source</a></code></li>
+	 </ol>	
+      <p>When you <a href="https://github.com/pcioni/HaxeFlixel-game">download</a> Groundbreaking Reads it will include a file named <code>project.xml</code>, CD into the directory and type the code below to run the game.</p>
+	   <code>cd path/to/project.xml</code>
+	   <br>
+	   <code>lime test neko -Dnext</code>
     </section>
-
-    <section class="slide" id="markup">
-      <h2>The Markup</h2>
-      <p>Slides are just HTML elements with a class of <code>slide</code>.</p>
-      <pre><code>&lt;section class=&quot;slide&quot;&gt;
-  &lt;h2&gt;How to Make a Deck&lt;/h2&gt;
-  &lt;ol&gt;
-    &lt;li&gt;
-      &lt;h3&gt;Write Slides&lt;/h3&gt;
-      &lt;p&gt;Slide content is simple HTML.&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;h3&gt;Choose Themes&lt;/h3&gt;
-      &lt;p&gt;One for slide styles and one for deck transitions.&lt;/p&gt;
-    &lt;/li&gt;
-    &hellip;
-  &lt;/ol&gt;
-&lt;/section&gt;</code></pre>
-    </section>
-
-    <section class="slide" id="themes">
-      <h2>Style Themes</h2>
-      <p>Customizes the colors, typography, and layout of slide&nbsp;content.</p>
-      <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/css/style-theme.css&quot;&gt;</code></pre>
-      <h2>Transition Themes</h2>
-      <p>Defines transitions between slides using CSS3 transitions.  Less capable browsers fall back to cutaways. But <strong>you</strong> aren&rsquo;t using <em>those</em> browsers to give your presentations, are&nbsp;you&hellip;</p>
-      <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/css/transition-theme.css&quot;&gt;</code></pre>
-    </section>
-
-    <section class="slide" id="extensions">
-      <h2>Extensions</h2>
-      <p>Core gives you basic slide functionality with left and right arrow navigation, but you may want more. Here are the ones included in this&nbsp;deck:</p>
-
-      <ul>
-        <li class="slide" id="extensions-goto">
-          <strong>deck.goto</strong>: Adds a shortcut key to jump to any slide number.  Hit g, type in the slide number, and hit&nbsp;enter.
+    <section class="slide" id="how-to-overview">
+      <h2>Cyclops and Rats</h2>
+      <ol>
+        <li>
+          <h3>Unity3D Game</h3>
+          <p>I designed the level, created models using basic Unity 3D shapes, textures using Substance Designer, and programmed the AI and lights. </p>
         </li>
-
-        <li class="slide" id="extensions-menu">
-          <strong>deck.menu</strong>: Adds a menu view, letting you see all slides in a grid. Hit m to toggle to menu view, continue navigating your deck, and hit m to return to normal view. Touch devices can double-tap the deck to switch between&nbsp;views.
+        <li>
+          <h3>Theme</h3>
+          <p>The theme of this game was constrained to the keyword "ascend".</p>
         </li>
-
-        <li class="slide" id="extensions-navigation">
-          <strong>deck.navigation</strong>: Adds clickable left and right buttons for the less keyboard&nbsp;inclined.
+        <li>
+          <h3>Gameplay</h3>
+		  <p>You play the role of a miner who is trapped in an elevator with a mining machine that has malfunctioned. The elevator is slowly running out of energy. Conveniently there are energy producing bugs skittering around the elevator. Your goal is to trap the bugs with your net gun while evading the machine and bring the bugs to the pylon in the center that powers the shaft.</p>
         </li>
-
-        <li class="slide" id="extensions-status">
-          <strong>deck.status</strong>: Adds a page number indicator. (current/total)
+		<li>
+			<h3>Links</h3>
+			<p><a href ="https://github.com/MAS820/Game4_FIX" >Project Source</a></p>
+		</li>
+      </ol>
+    </section>
+    <section class="slide" id="highfive">
+      <h2>Mech Racer (Working Title)</h2>
+      <ol>
+        <li>
+          <h3>Unreal Engine 4 Game</h3>
+          <p>Work In Progress (5 weeks in). Currently programming vehicle movement and race mechanics. </p>
         </li>
-
-        <li class="slide" id="extensions-scale">
-          <strong>deck.scale</strong>: Scales each slide to fit within the deck container using CSS Transforms for those browsers that support them.
+        <li>
+          <h3>Theme</h3>
+          <p>This is an epic humanoid mech racing game. It is based in a future and will involve a skill-based racing style and include plenty of mech combat!</p>
         </li>
-      </ul>
-
-      <p class="slide" id="extension-folders">Each extension folder in the download package contains the necessary JavaScript, CSS, and HTML&nbsp;files. For a complete list of extension modules included in deck.js, check out the&nbsp;<a href="http://imakewebthings.github.com/deck.js/docs">documentation</a>.</p>
-    </section>
-
-    <section class="slide" id="nested">
-      <h2>Nested Slides</h2>
-      <p>That last slide had a few steps.  To create substeps in slides, just nest them:</p>
-      <pre><code>&lt;section class=&quot;slide&quot;&gt;
-  &lt;h2&gt;Extensions&lt;/h2&gt;
-  &lt;p&gt;Core gives you basic slide functionality...&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li class=&quot;slide&quot;&gt;
-      &lt;h3&gt;deck.goto&lt;/h3&gt;
-      &lt;p&gt;Adds a shortcut key to jump to any slide number...&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/section&gt;</code></pre>
-    </section>
-
-    <section class="slide" id="elements-images">
-      <h2>Other Elements: Images</h2>
-      <img src="http://placekitten.com/600/375" alt="Kitties">
-      <pre><code>&lt;img src=&quot;http://placekitten.com/600/375&quot; alt=&quot;Kitties&quot;&gt;</code></pre>
-    </section>
-
-    <section class="slide" id="elements-blockquotes">
-      <h2>Other Elements: Blockquotes</h2>
-      <blockquote cite="http://example.org">
-        <p>Food is an important part of a balanced diet.</p>
-        <p><cite>Fran Lebowitz</cite></p>
-      </blockquote>
-      <pre><code>&lt;blockquote cite=&quot;http://example.org&quot;&gt;
-  &lt;p&gt;Food is an important part of a balanced diet.&lt;/p&gt;
-  &lt;p&gt;&lt;cite&gt;Fran Lebowitz&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</code></pre>
+        <li>
+          <h3>Gameplay</h3>
+		  <p>We are creating this game in order to create a more skill-based racing game. The Mario Kart series is a prime example of a successful racing game, however it is a game geared towards groups of families and friends. We want to create a game that requires deep understanding of the mechanics in order to encourage competitive play.</p>
+        </li>
+		<li>
+			<h3>Links</h3>
+			<p><a href ="https://github.com/tfang7/HighFive" >Project Source</a></p>
+		</li>
+      </ol>
     </section>
 
 
-    <section class="slide" id="elements-videos">
-      <h2>Other Elements: Video Embeds</h2>
-      <p>Embed videos from your favorite online video service or with an HTML5 video&nbsp;element.</p>
-
-      <iframe src="http://player.vimeo.com/video/1063136?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>
-
-      <pre><code>&lt;iframe src=&quot;http://player.vimeo.com/video/1063136?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;400&quot; height=&quot;225&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code></pre>
-    </section>
-
-    <section class="slide" id="digging-deeper">
-      <h2>Digging Deeper</h2>
-      <p>If you want to learn about making your own themes, extending deck.js, and more, check out the&nbsp;<a href="../docs/">documentation</a>.</p>
-    </section>
 
     <!-- deck.navigation snippet -->
     <div aria-role="navigation">
