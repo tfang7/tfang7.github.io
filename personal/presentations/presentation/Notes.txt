@@ -1,0 +1,3 @@
+http://www.codeproject.com/Articles/455228/Design-Patterns-of-Behavioral-Design-Patterns#Command
+http://www.javatpoint.com/behavioral-design-patterns
+http://programmers.stackexchange.com/questions/299520/do-we-need-servant-pattern-what-about-implementing-in-parent-class

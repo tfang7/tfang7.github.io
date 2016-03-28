@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Getting Started with deck.js</title>
+
+  <meta name="description" content="A jQuery library for modern HTML presentations">
+  <meta name="author" content="Caleb Troughton">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <!-- Core and extension CSS files -->
+  <link rel="stylesheet" media="screen" href="../core/deck.core.css">
+  <link rel="stylesheet" media="screen" href="../extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="../extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="../extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="../extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="../extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/style/neon.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="../core/print.css">
+
+  <script src="../modernizr.custom.js"></script>
+</head>
+
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides -->
+    <section class="slide" id="title-slide">
+      <h1>Servant Design Pattern</h1>
+      <h3>Presented by Tommy Fang</h3>
+      <h3>3/28/2016</h3>
+
+    </section>
+
+
+
+    <section class="slide" id="quick-start">
+      <h2>What is Servant?</h2>
+	  <ul>
+	      <li class="slide">
+          <strong>Servant</strong> is a behavioral design pattern that provides an interface to a group of classes without defining specific behaviors in each of them.
+        </li>
+		 <li class="slide">
+          <strong>Servant</strong> is a class that provides methods to provide a specific function for objects with similar parent classes.
+        </li>    
+		<li class="slide">
+          <strong>Servant</strong> methods are common for all objects.
+        </li>    
+		<li class="slide">
+          <strong>Servant</strong> pattern helps keep clean code and allows for flexibility.
+        </li>    
+			<li class="slide">
+          <strong>Why wouldn't we just create functions in the parent class and override inherited methods?</strong>
+		  <ul>
+		  	<li class = "slide">
+				Servant uses an <italic>interface<italic> and allows interactions with different types of classes.
+			</li>
+			<li class = "slide">
+				Methods in classes which implement the Servant interface must be defined.
+			</li>
+
+			</ul>
+			<li class = "slide">
+				Drawbacks
+				<ul> 
+				<li>
+					Servant is an anti-pattern.
+					</li>
+					<li> <italic>"A pattern that tells how to go from a problem to a bad solution."<italic></li>
+					<li> This helps us understand exactly why a solution is bad.</li>
+					<li> Servant is highly procedural. Class designs must be final and can't be dynamic.</li>
+
+				</ul>
+			</li>
+        </li>  
+	</ul>		
+		</section>
+		<section class="slide" id="quick-start">
+      <h2>Behaviorial Design Patterns</h2>
+	  <ul>
+	      <li class="slide">
+          <strong>Behaviorial Design Patterns</strong> are concerned with how objects interact and the functionalities they are responsible for.
+        </li>
+		 <li class="slide">
+		 The behavior emphasizes the communication between objects so it can be efficient and easy. 
+        </li>    
+		<li class="slide">
+         The objects should still be loosely coupled to avoid dependencies and hard coding.
+        </li>    
+		<li class="slide">
+		 <strong>Behaviorial Design Patterns</strong> focus on the way objects interconnect and not the instantiation process.
+        </li>    
+		</ul>
+		</section>
+    <section class="slide" id="quick-start">
+      <h2>Behaviorial Design Patterns: Servant and Command</h2>
+	      <li class="slide">
+          <strong>Command</strong> is a behavioral design pattern that enables information for a request to be encapsulated within an object.
+        </li>
+		 <li class="slide">
+          <strong>Command</strong> uses CommandBase as an interface for command objects. You can extend the base class to create new command objects.
+        </li>    
+		<li class="slide">
+          <strong>Servant</strong> methods are common for all objects that implement the interface.
+        </li>    
+		<li class="slide">
+          <strong>Servant</strong> pattern helps keep clean code and organized.
+        </li>    
+		</section>
+    <section class="slide" id="servantInterface">
+      <h2>Basic Servant Interface</h2>
+      <p><code>ServantInterface.java</code></p>
+      <pre><code>import java.awt.*;
+  public interface ServantInterface {
+    public void setPosition(Position p);
+    public void setColor(Color c);
+
+    public Position getPosition();
+    public Color getColor();
+	
+  public void interpolatePosition
+    (Position p, Position p_dest, String style);
+  public void interpolateColor
+    (Color c, Color c_dest, String style);
+  }</code></pre>
+    </section>
+    <section class="slide" id="markup">
+      <h2>Servant Object Methods</h2>
+      <p><code>Main.java</code></p>
+      <pre><code>import java.awt.*;
+
+  public class Main {
+  
+    public static void moveTo(servantInterface servicedObject, Position dest) {
+	servicedObject.setPosition(dest);}
+	  
+    public void moveBy(servantInterface servicedObject, int dx, int dy) {
+      // this is the place to offer the functionality
+	dx += servicedObject.getPosition().xPosition;
+	dy += servicedObject.getPosition().yPosition;
+	servicedObject.setPosition(new Position(dx, dy));}
+	  
+    public static void changeColor(ServantInterface servicedObject, Color col) {
+        servicedObject.setColor(col);}
+
+  }</code></pre>
+    </section>
+    <section class="slide" id="markup">
+      <h2>Servant Object Methods (continued)</h2>
+      <p><code>Main.java</code></p>
+      <pre><code>import java.awt.*;
+
+public class Main {
+  
+// Pseudocode, lerps values of serviced object.
+
+  public void interpolateColor(servantInterface servicedObject, Color dest, String style) {
+	servicedObject.lerpColor(dest,style); } 
+		
+  public void interpolatePosition(servantInterface servicedObject, Position dest, String style) {
+	servicedObject.lerpPosition(dest,style); }
+
+  }</code></pre>
+    </section>			
+
+	  <section class="slide" id="markup">
+      <h2>Rectangle Servant Object Class</h2>
+      <p><code>Rectangle.java</code></p>
+      <pre><code>import java.awt.*;
+	  
+//Extend the Servant Interface Class
+public class Rectangle implements ServantInterface {
+	private Position p;
+	private Color c;
+	
+// Methods, which set position/color of geometric object
+	public void setPosition(Position p) { this.p = p; }
+	public void setColor(Color c) { this.c = c; }
+	
+// Methods, which return position/color of geometric object
+	public Position getPosition() { return this.p; }
+	public Color getColor() { return this.c;} }
+	
+// Methods, which linearly interpolate position/color of geometric object
+	public void lerpColor(Color dest, String style) 
+		{ lerp (this.c, dest, style); }
+	public void lerpPosition(Position dest, String style) 
+		{ lerp (this.p, dest, style);} }
+
+}
+</code></pre>
+    </section>
+    <section class="slide" id="elements-images">
+      <h2>UML Diagram</h2>
+      <img src="UML.png" alt="Kitties">
+    </section>
+  <section class="slide" id="references">
+      <h2>Reference Links</h2>
+	  <ul>
+	  <li>http://www.codeproject.com/Articles/455228/Design-Patterns-of-Behavioral-Design-Patterns#Command</li>
+	  <li>http://www.javatpoint.com/behavioral-design-patterns</li>
+	  <li>http://programmers.stackexchange.com/questions/299520/do-we-need-servant-pattern-what-about-implementing-in-parent-class</li>
+	  <li>http://www.developer.com/java/implementing-behavioral-patterns-in-java.html</li>
+	  <li>http://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html</li>
+	  <li>http://c2.com/cgi/wiki?AntiPattern</li>
+	  </ul>
+    </section>
+   
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+  </div>
+
+<script src="../jquery.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+  $.deck('.slide');
+});
+</script>
+
+</body>
+</html>
