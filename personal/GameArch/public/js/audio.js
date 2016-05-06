@@ -140,12 +140,9 @@ function AudioToggle(){
     } else{
         _fftSize = 2048;
     }
-    console.log("Size: " + _fftSize);
 }
-
-document.addEventListener('keydown', function(event) {
-    if(event.keyCode == 80) {
-        if (audioLoaded){
+function PlayToggle(){
+            if (audioLoaded){
             var state = source.context.state;
             playing = !playing;
             if (state == 'running'){
@@ -158,6 +155,11 @@ document.addEventListener('keydown', function(event) {
             }
             
         }
+    
+}
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 80) {
+        PlayToggle();
 
     };
 
