@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Game Architecture Final</title>
+<link href="http://fonts.googleapis.com/css?family=Raleway:200,300" rel="stylesheet" type="text/css" />
+<link href="public/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<h1>Game Archicture Final Project - Tommy Fang, Christian Gonzalez</h1>
+<body>
+<canvas id = 'spectrogram' width = '1000' height = '325' background-color = 'black' style = 'display: block;'></canvas>
+<div id="info">Loading music<span id="loading_dots"></span></div>
+<div id="webgl"></div>
+<script type="text/javascript" src="public/js/jquery.js"></script>
+<script type="text/javascript" src="public/js/three.min.js"></script>
+<script type="text/javascript" src="public/js/audio.js"></script>
+<script type="text/javascript" src="public/js/TrackballControls.js"></script>
+<script type="text/javascript" src="public/js/TerrainMaster.js"></script>
+<script type="x-shader/x-vertex" id="vertexShader">
+        // Put the Vertex Shader code here
+        varying vec2 vUv;
+        void main(){
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+        }
+
+</script>
+<script type="x-shader/x-vertex" id="fragmentShader">
+    varying vec2 vUv;
+    void main() {
+        // colour is RGBA: u, v, 0, 1
+        gl_FragColor = vec4( vec3( vUv, 0. ), 1. );
+
+    }
+</script>
+<button onclick="toggle1()">Toggle Terrain Generation</button>
+<button onclick="toggle2()">Toggle Shader</button>
+
+<script>
+    function toggle1(){
+        Toggle();
+        AudioToggle();
+    }
+    function toggle2(){
+        ToggleShader();
+    }
+</script>
+</body>
+</html>
